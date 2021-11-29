@@ -1,5 +1,5 @@
 //API's
-let blocksum = "http://blocksum.org:11898/getinfo";
+let blocksum = "https://blocksum.org/api/getinfo";
 let swepool = "https://swepool.org/api/stats";
 let coingecko = "https://api.coingecko.com/api/v3/coins/kryptokrona";
 
