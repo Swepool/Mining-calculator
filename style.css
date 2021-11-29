@@ -1,7 +1,6 @@
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100vh;
+  width: 100vw;
   font-family: "Montserrat", sans-serif;
   font-family: "Roboto Mono", monospace;
   background-repeat: no-repeat;
@@ -12,10 +11,18 @@ body {
   color: #fff;
 }
 
+.centerdiv {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 h1 {
   font-family: "Montserrat", sans-serif;
   padding: 0px;
   margin: 0px;
+  font-size: 30px!important;
 }
 
 p {
@@ -27,7 +34,6 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 200px;
   width: 362px;
   height: 437px;
   background-image: linear-gradient(
@@ -41,10 +47,11 @@ p {
 }
 
 .card {
-  background: #110E13;
+  color: #fff!important;
+  background: #110E13!important;
   /* Sketch doesnt export gradient borders at this point */
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.17);
-  border-radius: 15px;
+  border-radius: 15px!important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,12 +80,12 @@ p {
   border: 1px solid #757575;
   background-color: transparent;
   height: 39px;
-  width: 262px;
+  width: 280px;
   font-size: 18px;
   padding-left: 10px;
 }
 
-#save-btn {
+#calcbtn {
 font-family: "Montserrat", sans-serif;
   margin-top: 10px;
   width: 280px;
@@ -92,7 +99,8 @@ font-family: "Montserrat", sans-serif;
 }
 
 #save-btn:hover {
-  background-color: #446e8b;
+  background-color: #c5cec8;
+  color: #2a2a2a;
   transition: 200ms;
 }
 

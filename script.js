@@ -5,7 +5,6 @@ let coingecko = "https://api.coingecko.com/api/v3/coins/kryptokrona";
 
 //User inputs
 
-
 //Get Table Cells by ID
 let dailyXKR = document.getElementById("daily");
 let weeklyXKR = document.getElementById("weekly");
@@ -19,13 +18,13 @@ async function calc() {
   await fetch(blocksum)
     .then((res) => res.json())
     .then(async (data) => {
-      hashrateKh = data.hashrate / 1000
+      hashrateKh = data.hashrate / 1000;
     });
 
   await fetch(swepool)
     .then((res) => res.json())
     .then(async (data) => {
-      reward = data.lastblock.reward / 100000
+      reward = data.lastblock.reward / 100000;
     });
 
   await fetch(coingecko)
@@ -34,22 +33,26 @@ async function calc() {
       price = data.market_data.current_price.usd;
     });
 
-    let userInput = document.getElementById("input").value;
+  let userInput = document.getElementById("input").value;
 
-    dailyReward = (((userInput / hashrateKh) * reward) * 960).toFixed(0)
-    weeklyReward = ((((userInput / hashrateKh) * reward) * 960) * 7).toFixed(0)
-    monthlyReward = ((((userInput / hashrateKh) * reward) * 960) * 30).toFixed(0)
+  dailyReward = ((userInput / hashrateKh) * reward * 960).toFixed(0);
+  weeklyReward = ((userInput / hashrateKh) * reward * 960 * 7).toFixed(0);
+  monthlyReward = ((userInput / hashrateKh) * reward * 960 * 30).toFixed(0);
 
-    dailyXKR.textContent = dailyReward
-    weeklyXKR.textContent = weeklyReward
-    monthlyXKR.textContent = monthlyReward
+  dailyXKR.textContent = dailyReward;
+  weeklyXKR.textContent = weeklyReward;
+  monthlyXKR.textContent = monthlyReward;
 
-    dollarDaily.textContent = '$' + (dailyReward * price).toFixed(2)
-    dollarWeekly.textContent = '$' + (weeklyReward * price).toFixed(2)
-    dollarMonthly.textContent = '$' + (monthlyReward * price).toFixed(2)
-
+  dollarDaily.textContent = "$" + (dailyReward * price).toFixed(2);
+  dollarWeekly.textContent = "$" + (weeklyReward * price).toFixed(2);
+  dollarMonthly.textContent = "$" + (monthlyReward * price).toFixed(2);
 
 }
 
-
-
+var input = document.getElementById("input");
+input.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("calcbtn").click();
+  }
+});
