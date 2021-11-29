@@ -1,0 +1,127 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url(./bg.png);
+  color: #fff;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+p {
+  font-family: "Roboto Mono", monospace;
+  font-size: 18px;
+}
+
+.cardOuter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+  width: 362px;
+  height: 437px;
+  background-image: linear-gradient(
+    225deg,
+    #32c5ff 0%,
+    #b620e0 51%,
+    #f7b500 100%
+  );
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.17);
+  border-radius: 15px;
+}
+
+.card {
+  background: #110E13;
+  /* Sketch doesnt export gradient borders at this point */
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.17);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Roboto Mono", monospace;
+  height: 435px;
+  width: 100%;
+  max-width: 360px;
+}
+
+.cardInner {
+  width: 280px;
+  margin-left: 39px;
+  margin-right: 39px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: row;
+}
+
+#input {
+  font-family: "Roboto Mono", monospace;
+  border-radius: 5px;
+  color: #fff;
+  border: 1px solid #757575;
+  background-color: transparent;
+  height: 39px;
+  width: 262px;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+#save-btn {
+font-family: "Montserrat", sans-serif;
+  margin-top: 10px;
+  width: 280px;
+  height: 45px;
+  border: 1.5px solid #2a2a2a;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: #43D16B;
+  color: #fff;
+  transition: 200ms;
+}
+
+#save-btn:hover {
+  background-color: #446e8b;
+  transition: 200ms;
+}
+
+table {
+  width: 100%;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+tr {
+  padding-top: 10px;
+  height: 35px;
+}
+
+.tdtitle {
+  font-weight: 900;
+}
+
+.imgDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+img {
+  height: 16px;
+}
+
+.tdalignr {
+  text-align: right;
+}
